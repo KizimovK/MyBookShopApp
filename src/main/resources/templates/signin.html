@@ -23,11 +23,11 @@
   <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="/assets/fonts/Montserrat/Montserrat-ExtraBold.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/css/fonts.min.css?v=56375974">
-  <link rel="stylesheet" href="/assets/css/basic.min.css?v=56375974">
-  <link rel="stylesheet" href="/assets/css/extra.min.css?v=56375974"><!--[if lt IE 9]>
+  <link rel="stylesheet" href="/assets/css/fonts.min.css?v=27449092">
+  <link rel="stylesheet" href="/assets/css/basic.min.css?v=27449092">
+  <link rel="stylesheet" href="/assets/css/extra.min.css?v=27449092"><!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script defer src="/assets/js/scripts.min.js?v=56375974"></script>
+  <script defer src="/assets/js/scripts.min.js?v=27449092"></script>
 </head>
 <body class="Site">
   <!--if lt IE 8
@@ -43,7 +43,7 @@
     <div class="Header-rowMain">
       <div class="wrap">
         <div class="row">
-          <div class="row-block Header-logo"><a class="logo" href="/static"><img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/><span class="logo-text">BOOKSHOP</span></a>
+          <div class="row-block Header-logo"><a class="logo" href="/"><img class="logo-image" src="/assets/img/logo.png" alt="logo.png"/><span class="logo-text">BOOKSHOP</span></a>
           </div>
           <div class="Header-searchWrap row-block">
             <div class="Header-searchLink"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19"><g><g><path fill="#b8b8b8" d="M17.812 17.852c.25.268.25.69 0 .948a.622.622 0 0 1-.457.2.64.64 0 0 1-.457-.2l-5.364-5.494a7.07 7.07 0 0 1-4.32 1.47C3.232 14.777 0 11.457 0 7.389 0 3.321 3.232 0 7.214 0c3.983 0 7.214 3.32 7.214 7.388 0 1.94-.74 3.7-1.926 5.015zM7.214 13.44c3.264 0 5.909-2.708 5.909-6.05 0-3.344-2.655-6.052-5.909-6.052-3.264 0-5.908 2.72-5.908 6.051 0 3.332 2.644 6.051 5.908 6.051z"/></g></g></svg>
@@ -78,7 +78,7 @@
           <ul class="menu menu_main">
             <li class="menu-item"><a class="menu-link" href="/index.html">Главная</a>
             </li>
-            <li class="menu-item"><a class="menu-link" href="/templates/genres/index.htmlindex.html">Жанры</a>
+            <li class="menu-item"><a class="menu-link" href="/templates/genres/index.html">Жанры</a>
             </li>
             <li class="menu-item"><a class="menu-link" href="/books/recent.html">Новинки</a>
             </li>
@@ -91,164 +91,82 @@
       </div>
     </div>
   </header>
-  <div class="Middle">
+  <div class="Middle Middle_form">
+    <div class="Middle-top">
+      <div class="wrap">
+        <h1 class="Middle-title">Вход
+        </h1>
+      </div>
+    </div>
     <div class="wrap">
       <main class="Middle-main">
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item"><a href="/index.html">Главная</a>
-          </li>
-          <li class="breadcrumbs-item"><a href="/templates/genres/index.htmlindex.html">Жанры</a>
-          </li>
-          <li class="breadcrumbs-item"><a href="/templates/genres/index.htmlindex.html">Легкое чтение</a>
-          </li>
-          <li class="breadcrumbs-item breadcrumbs-item_current"><span>Детективы</span>
-          </li>
-        </ul>
-        <header class="Middle-header">
-          <h1 class="Middle-title">Детективы
-          </h1>
-        </header>
-        <div class="Section">
-          <div class="Cards Cards_refresh">
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+        <form class="form Login" action="#" method="post">
+          <div class="Login-ins">
+            <div class="Login-step">
+              <div class="form-group">
+                <label class="form-label Login-title">Введите e-mail или телефон
+                </label>
               </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Техника</a>
-                </strong>
-                <div class="Card-description">Кондратенко Александр Петрович
-                </div>
-                <div class="Card-cost"><span class="Card-priceOld">₽300.00</span><span class="Card-price">₽190.00</span>
+              <div class="form-group">
+                <div class="row">
+                  <div class="row-block">
+                    <label class="toggle Login-type">
+                      <input type="radio" name="typeauth" value="phonetype" checked="checked"/><span class="toggle-box"></span><span class="toggle-text">Телефон</span>
+                    </label>
+                  </div>
+                  <div class="row-block">
+                    <label class="toggle Login-type">
+                      <input type="radio" name="typeauth" value="mailtype"/><span class="toggle-box"></span><span class="toggle-text">E-mail</span>
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-                <div class="Card-sale">30% скидка
-                </div>
+              <div class="form-group">
+                <input class="form-input form-input_phone" id="phone" name="phone" type="text" placeholder="Введите телефон" data-mask="+7 (999) 999-99-99" data-validate="require"/>
+                <input class="form-input form-input_mail" id="mail" name="mail" type="text" placeholder="Введите e-mail" data-validate="mail require"/>
               </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Английский язык. 5 класс. Английский в фокусе. Рабочая тетрадь. ФГОС</a>
-                </strong>
-                <div class="Card-description">Ваулина, Дули, Подоляко
-                </div>
-                <div class="Card-cost"><span class="Card-priceOld">₽250.00</span><span class="Card-price">₽210.00</span>
-                </div>
+              <div class="form-group form-group_center">
+                <button class="btn btn_primary form-btn" type="button" name="sendauth" id="sendauth" data-type="phone" data-send="">Далее
+                </button>
               </div>
             </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+            <div class="Login-step Login-step_hide" data-type="phone">
+              <div class="form-group">
+                <label class="form-label Login-title">На&nbsp;Ваш телефон отправлено сообщение с&nbsp;кодом для входа. Введите его:
+                </label>
               </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Английский язык. 4 класс. Английский в фокусе. Рабочая тетрадь</a>
-                </strong>
-                <div class="Card-description">Быкова, Дули, Эванс
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽190.00</span>
-                </div>
+              <div class="form-group form-group_key">
+                <input class="form-input" id="phonecode" name="phonecode" type="text" placeholder="Код" data-validate="key require" data-mask="999 999"/>
               </div>
-            </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-                <div class="Card-sale">30% скидка
-                </div>
-                <div class="Card-ribbon"><span class="Card-ribbonText">Бестселлер</span>
-                </div><a class="Card-status" title="Куплена"><img src="/assets/img/icons/check.svg" alt="check.svg"/></a>
-              </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Великая Отечественная война. 1941-1945</a>
-                </strong>
-                <div class="Card-description">Солопенко Алла, Меркулов Дмитрий
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽50.00</span>
-                </div>
+              <div class="form-group form-group_center">
+                <button class="btn btn_primary form-btn" type="button" name="toComeInPhone" id="toComeInPhone" data-send="">Войти
+                </button>
               </div>
             </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
+            <div class="Login-step Login-step_hide" data-type="mail">
+              <div class="form-group">
+                <label class="form-label Login-title">На&nbsp;Ваш e-mail отправлена ссылка для входа и&nbsp;код. Перейдите по&nbsp;ссылке или введите код ниже:
+                </label>
               </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Большое путешествие по телу человека</a>
-                </strong>
-                <div class="Card-description">Джон Фарндон
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽900.00</span>
-                </div>
+              <div class="form-group form-group_key">
+                <input class="form-input" id="mailcode" name="mailcode" type="text" placeholder="Код" data-validate="key require" data-mask="999 999"/>
               </div>
-            </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a><a class="Card-status" title="В корзине"><img src="/assets/img/icons/shopping-basket.svg" alt="shopping-basket.svg"/></a>
-              </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Великая Отечественная война. 1941-1945</a>
-                </strong>
-                <div class="Card-description">Солопенко Алла, Меркулов Дмитрий
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽50.00</span>
-                </div>
+              <div class="form-group form-group_center">
+                <button class="btn btn_primary form-btn" type="button" name="toComeInMail" id="toComeInMail" data-send="">Войти
+                </button>
               </div>
             </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-                <div class="Card-ribbon"><span class="Card-ribbonText">Бестселлер</span>
-                </div>
-              </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Большое путешествие по телу человека</a>
-                </strong>
-                <div class="Card-description">Джон Фарндон
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽900.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-              </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Английский язык. 4 класс. Английский в фокусе. Рабочая тетрадь</a>
-                </strong>
-                <div class="Card-description">Быкова, Дули, Эванс
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽190.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a>
-              </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Великая Отечественная война. 1941-1945</a>
-                </strong>
-                <div class="Card-description">Солопенко Алла, Меркулов Дмитрий
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽50.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="Card">
-              <div class="Card-picture"><a href="#"><img src="/assets/img/content/main/card.jpg" alt="card.jpg"/></a><a class="Card-status" title="Отложена"><img src="/assets/img/icons/heart.svg" alt="heart.svg"/></a>
-              </div>
-              <div class="Card-content">
-                <strong class="Card-title"><a href="#">Большое путешествие по телу человека</a>
-                </strong>
-                <div class="Card-description">Джон Фарндон
-                </div>
-                <div class="Card-cost"><span class="Card-price">₽900.00</span>
-                </div>
-              </div>
-            </div>
-            <div class="Cards-footer Cards-footer_center"><a class="btn btn_primary" href="#" data-refreshshow="genre" data-refreshoffset="10" data-refreshlimit="20" data-refreshid="1020">Показать еще</a>
+            <div class="form-group form-group_center"><a class="Login-reg" href="/signup.html">Зарегистрироваться</a>
             </div>
           </div>
-        </div>
+        </form>
       </main>
     </div>
   </div>
   <footer class="Footer">
     <div class="wrap">
       <div class="row Footer-main">
-        <div class="row-block"><a class="logo logo_footer Footer-logo" href="/static"><img class="logo-image" src="/assets/img/logo_footer.png" alt="logo_footer.png"/><span class="logo-text">BOOKSHOP</span></a>
+        <div class="row-block"><a class="logo logo_footer Footer-logo" href="/"><img class="logo-image" src="/assets/img/logo_footer.png" alt="logo_footer.png"/><span class="logo-text">BOOKSHOP</span></a>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid  unt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad
           </p>
           <ul class="menu menu_img menu_smallImg Footer-menuSoc">
@@ -268,7 +186,7 @@
           <ul class="menu menu_vt Footer-menu">
             <li class="menu-item"><a class="menu-link" href="/index.html">Главная</a>
             </li>
-            <li class="menu-item"><a class="menu-link" href="/templates/genres/index.htmlindex.html">Жанры</a>
+            <li class="menu-item"><a class="menu-link" href="/templates/genres/index.html">Жанры</a>
             </li>
             <li class="menu-item"><a class="menu-link" href="/books/recent.html">Новинки</a>
             </li>

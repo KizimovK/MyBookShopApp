@@ -6,8 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/genres")
-public class GenresPageController {
-
+public class GenresController {
     @GetMapping("")
     public String genresPage(){
         return "genres/index";
