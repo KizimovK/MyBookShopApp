@@ -3,14 +3,13 @@ package com.example.MyBookShopApp.service;
 import com.example.MyBookShopApp.entity.Author;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Service;
 
-import javax.swing.tree.RowMapper;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 @Service
 public class AuthorService {
@@ -40,5 +39,18 @@ public class AuthorService {
                    author.setName(rs.getString("name"));
                    return  author;
                 },authorId);
+    }
+
+    public Map<Character, List<Author>> getMapLetterAuthorsList(){
+        Map<Character, List<Author>> mapLetterAuthorsList = new TreeMap<>();
+        List<Author> authorsList = getAuthorsData();
+        for (Author author : authorsList){
+            char letter = author.getName().charAt(0);
+            if (!mapLetterAuthorsList.containsKey(letter)){
+                mapLetterAuthorsList.put(letter,new ArrayList<>());
+            }
+            mapLetterAuthorsList.get(letter).add(author);
+        }
+        return new TreeMap<>(mapLetterAuthorsList);
     }
 }
