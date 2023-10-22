@@ -22,14 +22,48 @@ public class MainPageController {
     public MainPageController(BookService bookService) {
         this.bookService = bookService;
     }
+
     @ModelAttribute("recommendedBooks")
-    public List<Book> recommendedBooks(){
+    public List<Book> recommendedBooks() {
         return bookService.getBooksData();
     }
 
     @GetMapping("/")
-    public String mainPage(){
+    public String mainPage() {
         return "index";
     }
 
+    @GetMapping("/signin")
+    public String signInPage() {
+        return "signin";
+    }
+
+    @GetMapping("/cart")
+    public String cartPage() {
+        return "cart";
+    }
+
+    @GetMapping("/postponed")
+    public String postponedPage(){
+        return "postponed";
+    }
+    @GetMapping("/about")
+    public String aboutPage() {
+        return "about";
+    }
+
+    @GetMapping("/faq")
+    public String faqPage() {
+        return "faq";
+    }
+
+    @GetMapping("/contacts")
+    public String contactPage() {
+        return "contacts";
+    }
+
+    @GetMapping("/documents")
+    public String documentsPage() {
+        return "documents/index";
+    }
 }
